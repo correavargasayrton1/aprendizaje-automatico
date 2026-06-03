@@ -1,1 +1,60 @@
+Trabajo Final — Aprendizaje Automático
+
+
+1. Descripción del Dataset
+
+Para el desarrollo de este trabajo decidí utilizar un dataset compuesto por estadísticas partido a partido de los 30 jugadores más destacados de la temporada NBA 2024-2025. Ya que permite analizar el rendimiento individual de los jugadores y detectar patrones que pueden ser útiles para tareas de scouting deportivo, y realizar estrategias ofensivas y defensivas
+
+Cada fila del dataset representa la actuación de un jugador en un partido específico. Gracias a esto se puede ver la evolucion de su desempeño a lo largo de la temporada, comparar rendimientos y evaluar si mantiene un nivel constante o si tiene variaciones importantes entre encuentros.
+
+Características generales del dataset:
+
+• Nombre: NBA Game Logs — Season 2024/25
+• Cantidad de registros: 900 filas
+• Cantidad de variables: 22 columnas
+• Período analizado: del 22 de octubre de 2024 al 13 de abril de 2025
+• Jugadores incluidos: 30 jugadores destacados de la temporada
+• Formato del archivo: CSV
+
+2. Descripción de las Variables
+
+• Nombre del jugador.
+• Equipo al que pertenece.
+• Rival enfrentado.
+• Fecha del partido.
+• Resultado del encuentro.
+• Minutos jugados.
+• Puntos anotados.
+• Rebotes.
+• Asistencias.
+• Robos y bloqueos.
+• Pérdidas de balón.
+• Porcentajes de lanzamiento.
+
+3. Origen del Dataset
+
+Los datos fueron obtenidos a partir de la información oficial publicada por la NBA mediante la librería nba_api de Python. Esta herramienta permite acceder de forma programática a las estadísticas disponibles en stats.nba.com
+
+Para construir el dataset realicé la extracción de los datos correspondientes a los jugadores seleccionados y luego consolidé toda la información en un único archivo CSV
+Información de la fuente:
+
+• Fuente: stats.nba.com
+• Librería utilizada: nba_api
+• Fecha de adquisición: junio de 2026
+• Tipo de acceso: dominio público
+
+4. Calidad de los Datos y Preprocesamiento Inicial
+
+Antes de comenzar con el modelado realicé una revisión general de la calidad de los datos. Durante esta etapa observé que las variables numéricas principales, como puntos, rebotes, asistencias y minutos jugados, no presentan valores nulos. Lo cual hizo ams facil el trabajo posterior 
+También detecté que algunas variables porcentuales pueden presentar valores extremos cuando un jugador realiza pocos intentos de lanzamiento durante un partido. Este comportamiento será tenido en cuenta durante las próximas etapas de preparación y limpieza de datos.
+
+Por último, antes de entrenar los modelos se aplicarán técnicas de normalización y escalado de datos, como MinMaxScaler o StandardScaler
+5. Repositorio GitHub
+
+Todo el material utilizado para este trabajo, incluyendo el dataset y la documentación correspondiente, se encuentra disponible en el repositorio del proyecto:
+
+github.com/correavargasayrton1/aprendizaje-automatico
+
+• nba_game_logs_2024_25
+• Entrega2
 
